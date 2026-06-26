@@ -87,7 +87,15 @@ If yes → write file(s) to disk
    - **Minnesota** — matches `TMC - University of Minnesota - Robbins`, `TMC - University of Minnesota - Niedernhofer`
    - **Buck** — matches `TMC - Buck Institute`, `TDA - Buck Institute`
 
-7. **Mouse vs Human** — if user asks about a "source" or "donor", ask whether they mean Human, Mouse, or both.
+### Source Type (Human vs Mouse) Clarification
+
+SenNet contains data from both Human and Mouse sources (as well as Human Organoid and Mouse Organoid). The source type is a first-class filter that significantly narrows results.
+
+**Rule**: If the user does not explicitly specify a source type (human, mouse, organoid, etc.) in their natural-language query, the agent MUST ask:
+
+> "Are you interested in Human data, Mouse data, or both?"
+
+This applies regardless of the entity type being searched (Dataset, Sample, Source, or Collection).
 
 ### Dataset Classification
 
@@ -298,7 +306,7 @@ The `source.source_type` field (on Sample entities) or top-level `source_type` (
 - `Human Organoid` — human-derived organoid
 - `Mouse Organoid` — mouse-derived organoid
 
-If the user mentions "donor" but does not specify human or mouse, ask: "Human donor, mouse model, or both?"
+The agent MUST ask about source type if the user hasn't specified one (see [[Source Type (Human vs Mouse) Clarification]] above).
 
 ---
 
