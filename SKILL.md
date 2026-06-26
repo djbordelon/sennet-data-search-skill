@@ -86,7 +86,9 @@ If yes → write file(s) to disk
 
 6. **Ambiguous group name** — when the user mentions a term that matches multiple groups in [[GROUP_NAME_VALUES]], list the matching options and ask which they want. This applies to:
    - **Yale** — matches `TMC - Yale University - Fan`, `TMC - Yale University - Dixit`
+   - **TMC - Yale University** — ambiguous between `TMC - Yale University - Fan` and `TMC - Yale University - Dixit`
    - **Minnesota** — matches `TMC - University of Minnesota - Robbins`, `TMC - University of Minnesota - Niedernhofer`
+   - **TMC - University of Minnesota** — ambiguous between `TMC - University of Minnesota - Robbins` and `TMC - University of Minnesota - Niedernhofer`
    - **Buck** — matches `TMC - Buck Institute`, `TDA - Buck Institute`
 
 ### Source Type (Human vs Mouse) Clarification
@@ -193,6 +195,8 @@ The ES `organ` field (on Sample and `origin_samples`) stores UBERON codes. Use t
 | MIT | group_name | `TDA - Massachusetts Institute of Technology` |
 | Michigan | group_name | `TDA - University of Michigan` |
 | Mass General, MGH | group_name | `TDA - Massachusetts General Hospital` |
+| TMC - University of Minnesota | group_name | `TMC - University of Minnesota - Robbins`, `TMC - University of Minnesota - Niedernhofer` |
+| TMC - Yale University | group_name | `TMC - Yale University - Fan`, `TMC - Yale University - Dixit` |
 | source type human | source.source_type | `Human` |
 | source type mouse | source.source_type | `Mouse` |
 | source type organoid | source.source_type | `Human Organoid`, `Mouse Organoid` |
