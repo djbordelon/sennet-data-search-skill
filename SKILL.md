@@ -72,6 +72,8 @@ If yes → write file(s) to disk
 
 1. **Ambiguous assay type** — there are several kinds of RNAseq or ATACseq:
    - "Do you mean all RNAseq variants, or a specific one like `Bulk RNAseq`?"
+   - "CosMx" could mean `CosMx Proteomics` or `CosMx Transcriptomics`. Ask: "Did you mean CosMx Proteomics, CosMx Transcriptomics, or both?"
+   - "Visium" could mean `Visium (no probes)`, `Visium (with probes)`, or `Visium HD`. Ask: "Which Visium variant do you mean?"
 
 2. **Ambiguous entity type** — "find kidneys" could mean datasets about kidneys or samples. Default to **Dataset** unless context suggests otherwise.
 
@@ -198,6 +200,7 @@ The ES `organ` field (on Sample and `origin_samples`) stores UBERON codes. Use t
 | mouse model | source.source_type | `Mouse` |
 | all RNAseq | dataset_type | ["RNAseq", "Bulk RNAseq", "RNAseq (with probes)", "scRNAseq (10x Genomics v2)", "scRNAseq (10x Genomics v3)", "snRNAseq (10x Genomics v2)", "snRNAseq (10x Genomics v3)", "sciRNAseq", "snRNAseq (SNARE-seq2)"] |
 | all ATACseq | dataset_type | ["ATACseq", "Bulk ATACseq", "sciATACseq", "snATACseq-multiome", "snATACseq", "snATACseq (SNARE-seq2)"] |
+| CosMx, CosMX | dataset_type | `CosMx Proteomics`, `CosMx Transcriptomics` |
 | all Histology | dataset_type | ["Histology", "AB-PAS Stained Microscopy"] |
 | all Visium | dataset_type | ["Visium (no probes)", "Visium (with probes)", "Visium HD"] |
 | whole-genome survey | dataset_type | WGS |
