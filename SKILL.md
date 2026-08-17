@@ -228,11 +228,13 @@ Alphabetical lists:
 ATACseq
 CosMx Proteomics
 CosMx Transcriptomics
+CyTOF
 DBiT-seq
 GeoMx (NGS)
 Histology
 LC-MS
 PhenoCycler
+Raman Imaging
 RNAseq
 RNAseq (with probes)
 Seq-Scope
